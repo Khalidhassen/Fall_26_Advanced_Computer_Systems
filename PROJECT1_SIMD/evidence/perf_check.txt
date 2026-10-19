@@ -1,0 +1,13 @@
+8388608,100,0,0.416664401,4166.644009999,2.013277,PASS
+
+ Performance counter stats for './types_float_native 8388608 100 0':
+
+   <not supported>      cycles:u                                                    
+   <not supported>      instructions:u                                              
+
+       0.531259201 seconds time elapsed
+
+       0.491899000 seconds user
+       0.039351000 seconds sys
+
+

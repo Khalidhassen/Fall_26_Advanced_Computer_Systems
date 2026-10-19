@@ -1,0 +1,76 @@
+
+evidence/dot.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <dot>:
+   0:	f3 0f 1e fa          	endbr64 
+   4:	48 89 f1             	mov    rcx,rsi
+   7:	48 85 d2             	test   rdx,rdx
+   a:	0f 84 e0 00 00 00    	je     f0 <dot+0xf0>
+  10:	48 8d 42 ff          	lea    rax,[rdx-0x1]
+  14:	48 83 f8 06          	cmp    rax,0x6
+  18:	0f 86 de 00 00 00    	jbe    fc <dot+0xfc>
+  1e:	48 89 d6             	mov    rsi,rdx
+  21:	48 c1 ee 03          	shr    rsi,0x3
+  25:	48 c1 e6 05          	shl    rsi,0x5
+  29:	31 c0                	xor    eax,eax
+  2b:	c5 f8 57 c0          	vxorps xmm0,xmm0,xmm0
+  2f:	90                   	nop
+  30:	c5 fc 10 1c 07       	vmovups ymm3,YMMWORD PTR [rdi+rax*1]
+  35:	c4 e2 65 b8 04 01    	vfmadd231ps ymm0,ymm3,YMMWORD PTR [rcx+rax*1]
+  3b:	48 83 c0 20          	add    rax,0x20
+  3f:	48 39 f0             	cmp    rax,rsi
+  42:	75 ec                	jne    30 <dot+0x30>
+  44:	c4 e3 7d 19 c1 01    	vextractf128 xmm1,ymm0,0x1
+  4a:	c5 f0 58 c0          	vaddps xmm0,xmm1,xmm0
+  4e:	48 89 d0             	mov    rax,rdx
+  51:	48 83 e0 f8          	and    rax,0xfffffffffffffff8
+  55:	c5 f8 12 c8          	vmovhlps xmm1,xmm0,xmm0
+  59:	c5 f0 58 c8          	vaddps xmm1,xmm1,xmm0
+  5d:	c5 f0 c6 c1 55       	vshufps xmm0,xmm1,xmm1,0x55
+  62:	c5 f8 58 c1          	vaddps xmm0,xmm0,xmm1
+  66:	f6 c2 07             	test   dl,0x7
+  69:	0f 84 89 00 00 00    	je     f8 <dot+0xf8>
+  6f:	c5 f8 77             	vzeroupper 
+  72:	48 89 d6             	mov    rsi,rdx
+  75:	48 29 c6             	sub    rsi,rax
+  78:	4c 8d 46 ff          	lea    r8,[rsi-0x1]
+  7c:	49 83 f8 02          	cmp    r8,0x2
+  80:	76 2e                	jbe    b0 <dot+0xb0>
+  82:	c5 f8 10 24 87       	vmovups xmm4,XMMWORD PTR [rdi+rax*4]
+  87:	49 89 f0             	mov    r8,rsi
+  8a:	c5 d8 59 0c 81       	vmulps xmm1,xmm4,XMMWORD PTR [rcx+rax*4]
+  8f:	49 83 e0 fc          	and    r8,0xfffffffffffffffc
+  93:	4c 01 c0             	add    rax,r8
+  96:	c5 f0 12 d1          	vmovhlps xmm2,xmm1,xmm1
+  9a:	c5 e8 58 d1          	vaddps xmm2,xmm2,xmm1
+  9e:	c5 e8 c6 ca 55       	vshufps xmm1,xmm2,xmm2,0x55
+  a3:	c5 f0 58 ca          	vaddps xmm1,xmm1,xmm2
+  a7:	c5 fa 58 c1          	vaddss xmm0,xmm0,xmm1
+  ab:	4c 39 c6             	cmp    rsi,r8
+  ae:	74 44                	je     f4 <dot+0xf4>
+  b0:	c5 fa 10 2c 87       	vmovss xmm5,DWORD PTR [rdi+rax*4]
+  b5:	4c 8d 40 01          	lea    r8,[rax+0x1]
+  b9:	c4 e2 51 b9 04 81    	vfmadd231ss xmm0,xmm5,DWORD PTR [rcx+rax*4]
+  bf:	48 8d 34 85 00 00 00 	lea    rsi,[rax*4+0x0]
+  c6:	00 
+  c7:	4c 39 c2             	cmp    rdx,r8
+  ca:	76 28                	jbe    f4 <dot+0xf4>
+  cc:	c5 fa 10 74 31 04    	vmovss xmm6,DWORD PTR [rcx+rsi*1+0x4]
+  d2:	48 83 c0 02          	add    rax,0x2
+  d6:	c4 e2 49 b9 44 37 04 	vfmadd231ss xmm0,xmm6,DWORD PTR [rdi+rsi*1+0x4]
+  dd:	48 39 c2             	cmp    rdx,rax
+  e0:	76 12                	jbe    f4 <dot+0xf4>
+  e2:	c5 fa 10 7c 37 08    	vmovss xmm7,DWORD PTR [rdi+rsi*1+0x8]
+  e8:	c4 e2 41 b9 44 31 08 	vfmadd231ss xmm0,xmm7,DWORD PTR [rcx+rsi*1+0x8]
+  ef:	c3                   	ret    
+  f0:	c5 f8 57 c0          	vxorps xmm0,xmm0,xmm0
+  f4:	c3                   	ret    
+  f5:	0f 1f 00             	nop    DWORD PTR [rax]
+  f8:	c5 f8 77             	vzeroupper 
+  fb:	c3                   	ret    
+  fc:	31 c0                	xor    eax,eax
+  fe:	c5 f8 57 c0          	vxorps xmm0,xmm0,xmm0
+ 102:	e9 6b ff ff ff       	jmp    72 <dot+0x72>

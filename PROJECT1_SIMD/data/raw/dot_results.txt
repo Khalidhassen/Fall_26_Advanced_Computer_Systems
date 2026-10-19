@@ -1,0 +1,216 @@
+Configuration: 1024 200000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.248655 seconds
+Time per pass: 1.243 microseconds
+Throughput: 1.647 GFLOP/s
+Configuration: 1024 200000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.022483 seconds
+Time per pass: 0.112 microseconds
+Throughput: 18.218 GFLOP/s
+Configuration: 1024 200000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.248490 seconds
+Time per pass: 1.242 microseconds
+Throughput: 1.648 GFLOP/s
+Configuration: 1024 200000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.022583 seconds
+Time per pass: 0.113 microseconds
+Throughput: 18.137 GFLOP/s
+Configuration: 1024 200000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.245141 seconds
+Time per pass: 1.226 microseconds
+Throughput: 1.671 GFLOP/s
+Configuration: 1024 200000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 1024
+Repetitions: 200000
+Dot product: 192
+Checksum: 38401920
+Total time: 0.023500 seconds
+Time per pass: 0.118 microseconds
+Throughput: 17.430 GFLOP/s
+Configuration: 16384 20000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.418508 seconds
+Time per pass: 20.925 microseconds
+Throughput: 1.566 GFLOP/s
+Configuration: 16384 20000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.050824 seconds
+Time per pass: 2.541 microseconds
+Throughput: 12.895 GFLOP/s
+Configuration: 16384 20000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.423614 seconds
+Time per pass: 21.181 microseconds
+Throughput: 1.547 GFLOP/s
+Configuration: 16384 20000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.051734 seconds
+Time per pass: 2.587 microseconds
+Throughput: 12.668 GFLOP/s
+Configuration: 16384 20000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.420289 seconds
+Time per pass: 21.014 microseconds
+Throughput: 1.559 GFLOP/s
+Configuration: 16384 20000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 16384
+Repetitions: 20000
+Dot product: 3072
+Checksum: 61470720
+Total time: 0.050445 seconds
+Time per pass: 2.522 microseconds
+Throughput: 12.992 GFLOP/s
+Configuration: 262144 2000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.680135 seconds
+Time per pass: 340.068 microseconds
+Throughput: 1.542 GFLOP/s
+Configuration: 262144 2000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.094988 seconds
+Time per pass: 47.494 microseconds
+Throughput: 11.039 GFLOP/s
+Configuration: 262144 2000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.680427 seconds
+Time per pass: 340.213 microseconds
+Throughput: 1.541 GFLOP/s
+Configuration: 262144 2000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.093000 seconds
+Time per pass: 46.500 microseconds
+Throughput: 11.275 GFLOP/s
+Configuration: 262144 2000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.676723 seconds
+Time per pass: 338.362 microseconds
+Throughput: 1.549 GFLOP/s
+Configuration: 262144 2000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 262144
+Repetitions: 2000
+Dot product: 49152
+Checksum: 98795520
+Total time: 0.099300 seconds
+Time per pass: 49.650 microseconds
+Throughput: 10.560 GFLOP/s
+Configuration: 8388608 100 | Run: 1 | scalar
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 1.106360 seconds
+Time per pass: 11063.595 microseconds
+Throughput: 1.516 GFLOP/s
+Configuration: 8388608 100 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 0.322862 seconds
+Time per pass: 3228.620 microseconds
+Throughput: 5.196 GFLOP/s
+Configuration: 8388608 100 | Run: 2 | scalar
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 1.093539 seconds
+Time per pass: 10935.390 microseconds
+Throughput: 1.534 GFLOP/s
+Configuration: 8388608 100 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 0.318031 seconds
+Time per pass: 3180.308 microseconds
+Throughput: 5.275 GFLOP/s
+Configuration: 8388608 100 | Run: 3 | scalar
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 1.120463 seconds
+Time per pass: 11204.635 microseconds
+Throughput: 1.497 GFLOP/s
+Configuration: 8388608 100 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 8388608
+Repetitions: 100
+Dot product: 1572864
+Checksum: 173015040
+Total time: 0.340516 seconds
+Time per pass: 3405.160 microseconds
+Throughput: 4.927 GFLOP/s

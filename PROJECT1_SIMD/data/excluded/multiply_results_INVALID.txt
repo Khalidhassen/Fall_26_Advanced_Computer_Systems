@@ -1,0 +1,144 @@
+Configuration: 1024 200000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.552376 seconds
+Time per pass: 5523.762 microseconds
+Throughput: 1.519 GFLOP/s
+Configuration: 1024 200000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.471219 seconds
+Time per pass: 4712.188 microseconds
+Throughput: 1.780 GFLOP/s
+Configuration: 1024 200000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.548563 seconds
+Time per pass: 5485.632 microseconds
+Throughput: 1.529 GFLOP/s
+Configuration: 1024 200000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.509274 seconds
+Time per pass: 5092.735 microseconds
+Throughput: 1.647 GFLOP/s
+Configuration: 1024 200000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.543288 seconds
+Time per pass: 5432.879 microseconds
+Throughput: 1.544 GFLOP/s
+Configuration: 1024 200000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.498184 seconds
+Time per pass: 4981.845 microseconds
+Throughput: 1.684 GFLOP/s
+Configuration: 16384 20000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.581863 seconds
+Time per pass: 5818.634 microseconds
+Throughput: 1.442 GFLOP/s
+Configuration: 16384 20000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.470548 seconds
+Time per pass: 4705.476 microseconds
+Throughput: 1.783 GFLOP/s
+Configuration: 16384 20000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.520360 seconds
+Time per pass: 5203.605 microseconds
+Throughput: 1.612 GFLOP/s
+Configuration: 16384 20000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.470671 seconds
+Time per pass: 4706.710 microseconds
+Throughput: 1.782 GFLOP/s
+Configuration: 16384 20000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.522095 seconds
+Time per pass: 5220.950 microseconds
+Throughput: 1.607 GFLOP/s
+Configuration: 16384 20000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.493428 seconds
+Time per pass: 4934.278 microseconds
+Throughput: 1.700 GFLOP/s
+Configuration: 262144 2000 | Run: 1 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.558789 seconds
+Time per pass: 5587.895 microseconds
+Throughput: 1.501 GFLOP/s
+Configuration: 262144 2000 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.491880 seconds
+Time per pass: 4918.805 microseconds
+Throughput: 1.705 GFLOP/s
+Configuration: 262144 2000 | Run: 2 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.572168 seconds
+Time per pass: 5721.676 microseconds
+Throughput: 1.466 GFLOP/s
+Configuration: 262144 2000 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.466249 seconds
+Time per pass: 4662.486 microseconds
+Throughput: 1.799 GFLOP/s
+Configuration: 262144 2000 | Run: 3 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.567068 seconds
+Time per pass: 5670.682 microseconds
+Throughput: 1.479 GFLOP/s
+Configuration: 262144 2000 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.466653 seconds
+Time per pass: 4666.532 microseconds
+Throughput: 1.798 GFLOP/s
+Configuration: 8388608 100 | Run: 1 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.538269 seconds
+Time per pass: 5382.695 microseconds
+Throughput: 1.558 GFLOP/s
+Configuration: 8388608 100 | Run: 1 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.493192 seconds
+Time per pass: 4931.921 microseconds
+Throughput: 1.701 GFLOP/s
+Configuration: 8388608 100 | Run: 2 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.569354 seconds
+Time per pass: 5693.536 microseconds
+Throughput: 1.473 GFLOP/s
+Configuration: 8388608 100 | Run: 2 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.506268 seconds
+Time per pass: 5062.680 microseconds
+Throughput: 1.657 GFLOP/s
+Configuration: 8388608 100 | Run: 3 | scalar
+Correctness: PASS
+Elements: 8388608
+Total time: 0.555533 seconds
+Time per pass: 5555.333 microseconds
+Throughput: 1.510 GFLOP/s
+Configuration: 8388608 100 | Run: 3 | SIMD
+Correctness: PASS
+Elements: 8388608
+Total time: 0.468841 seconds
+Time per pass: 4688.408 microseconds
+Throughput: 1.789 GFLOP/s

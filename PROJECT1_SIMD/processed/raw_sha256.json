@@ -1,0 +1,9 @@
+{
+  "axpy_results.txt": "69656713c3216efdaf11a962765d1a4fee488d53bb1a757cd9144764eba3a3a2",
+  "bandwidth_results.csv": "a58a4c58b7e0b2e5ec1abc3faf1e85ea35f5e8a6a0534e02cfe8dec9f53eb208",
+  "dot_results.txt": "b79770934ca2467a45391ba16c74eb2f38c7e486f587bf66662a4958a1585b1b",
+  "layout_results.csv": "453ebbbd6f1d2ddc81b7592a3715daf390db6cdf67a912706e4478674adf5e6f",
+  "multiply_results_corrected.txt": "4881a7b548c980e54f401173f8764ed28a290e7b6a70e47e79ac9dd09b44871f",
+  "stride_results.csv": "ae4f9fade929a64d707470c77bdba055bf6e0d6a1e47ffc8d05202b6234a9f28",
+  "types_results.csv": "df1e19ead4f6f86f58f962b98e5d96b7e6cc9aab6abb9580df5b4486807f2af3"
+}

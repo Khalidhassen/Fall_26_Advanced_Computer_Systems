@@ -1,0 +1,81 @@
+
+review/simd-project/axpy_simd:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+0000000000001670 <axpy>:
+    1670:	f3 0f 1e fa          	endbr64
+    1674:	48 89 f1             	mov    rcx,rsi
+    1677:	48 85 d2             	test   rdx,rdx
+    167a:	0f 84 da 00 00 00    	je     175a <axpy+0xea>
+    1680:	48 8d 42 ff          	lea    rax,[rdx-0x1]
+    1684:	48 83 f8 06          	cmp    rax,0x6
+    1688:	0f 86 d6 00 00 00    	jbe    1764 <axpy+0xf4>
+    168e:	48 89 d6             	mov    rsi,rdx
+    1691:	48 c1 ee 03          	shr    rsi,0x3
+    1695:	c4 e2 7d 18 d0       	vbroadcastss ymm2,xmm0
+    169a:	48 c1 e6 05          	shl    rsi,0x5
+    169e:	31 c0                	xor    eax,eax
+    16a0:	c5 fc 10 0c 07       	vmovups ymm1,YMMWORD PTR [rdi+rax*1]
+    16a5:	c4 e2 6d a8 0c 01    	vfmadd213ps ymm1,ymm2,YMMWORD PTR [rcx+rax*1]
+    16ab:	c5 fc 11 0c 01       	vmovups YMMWORD PTR [rcx+rax*1],ymm1
+    16b0:	48 83 c0 20          	add    rax,0x20
+    16b4:	48 39 f0             	cmp    rax,rsi
+    16b7:	75 e7                	jne    16a0 <axpy+0x30>
+    16b9:	48 89 d0             	mov    rax,rdx
+    16bc:	48 83 e0 f8          	and    rax,0xfffffffffffffff8
+    16c0:	f6 c2 07             	test   dl,0x7
+    16c3:	0f 84 97 00 00 00    	je     1760 <axpy+0xf0>
+    16c9:	c5 f8 77             	vzeroupper
+    16cc:	48 89 d6             	mov    rsi,rdx
+    16cf:	48 29 c6             	sub    rsi,rax
+    16d2:	4c 8d 46 ff          	lea    r8,[rsi-0x1]
+    16d6:	49 83 f8 02          	cmp    r8,0x2
+    16da:	76 28                	jbe    1704 <axpy+0x94>
+    16dc:	4c 8d 04 81          	lea    r8,[rcx+rax*4]
+    16e0:	c4 c1 78 10 18       	vmovups xmm3,XMMWORD PTR [r8]
+    16e5:	c5 f8 c6 c8 00       	vshufps xmm1,xmm0,xmm0,0x0
+    16ea:	c4 e2 61 98 0c 87    	vfmadd132ps xmm1,xmm3,XMMWORD PTR [rdi+rax*4]
+    16f0:	c4 c1 78 11 08       	vmovups XMMWORD PTR [r8],xmm1
+    16f5:	49 89 f0             	mov    r8,rsi
+    16f8:	49 83 e0 fc          	and    r8,0xfffffffffffffffc
+    16fc:	4c 01 c0             	add    rax,r8
+    16ff:	4c 39 c6             	cmp    rsi,r8
+    1702:	74 56                	je     175a <axpy+0xea>
+    1704:	c5 fa 10 0c 87       	vmovss xmm1,DWORD PTR [rdi+rax*4]
+    1709:	48 8d 34 85 00 00 00 	lea    rsi,[rax*4+0x0]
+    1710:	00 
+    1711:	4c 8d 04 31          	lea    r8,[rcx+rsi*1]
+    1715:	c4 c2 79 a9 08       	vfmadd213ss xmm1,xmm0,DWORD PTR [r8]
+    171a:	c4 c1 7a 11 08       	vmovss DWORD PTR [r8],xmm1
+    171f:	4c 8d 40 01          	lea    r8,[rax+0x1]
+    1723:	4c 39 c2             	cmp    rdx,r8
+    1726:	76 32                	jbe    175a <axpy+0xea>
+    1728:	c5 fa 10 4c 37 04    	vmovss xmm1,DWORD PTR [rdi+rsi*1+0x4]
+    172e:	4c 8d 44 31 04       	lea    r8,[rcx+rsi*1+0x4]
+    1733:	c4 c2 79 a9 08       	vfmadd213ss xmm1,xmm0,DWORD PTR [r8]
+    1738:	48 83 c0 02          	add    rax,0x2
+    173c:	c4 c1 7a 11 08       	vmovss DWORD PTR [r8],xmm1
+    1741:	48 39 c2             	cmp    rdx,rax
+    1744:	76 14                	jbe    175a <axpy+0xea>
+    1746:	48 8d 44 31 08       	lea    rax,[rcx+rsi*1+0x8]
+    174b:	c5 fa 10 20          	vmovss xmm4,DWORD PTR [rax]
+    174f:	c4 e2 59 99 44 37 08 	vfmadd132ss xmm0,xmm4,DWORD PTR [rdi+rsi*1+0x8]
+    1756:	c5 fa 11 00          	vmovss DWORD PTR [rax],xmm0
+    175a:	c3                   	ret
+    175b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+    1760:	c5 f8 77             	vzeroupper
+    1763:	c3                   	ret
+    1764:	31 c0                	xor    eax,eax
+    1766:	e9 61 ff ff ff       	jmp    16cc <axpy+0x5c>
+
+Disassembly of section .fini:

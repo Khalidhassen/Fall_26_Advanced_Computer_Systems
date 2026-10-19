@@ -1,0 +1,9 @@
+{
+  "layout": 160,
+  "stride": 80,
+  "types": 120,
+  "baseline": 72,
+  "bandwidth": 5,
+  "total": 437,
+  "all_correctness_pass": true
+}

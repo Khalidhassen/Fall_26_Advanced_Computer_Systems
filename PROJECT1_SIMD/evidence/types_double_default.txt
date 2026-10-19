@@ -1,0 +1,33 @@
+main_double.c:15:5: missed: statement clobbers memory: clock_gettime (1, &t);
+main_double.c:16:21: note: ***** Analysis failed with vector mode V2DI
+main_double.c:16:21: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+main_double.c:19:5: note: vectorized 0 loops in function.
+main_double.c:27:24: missed: statement clobbers memory: n_67 = strtoull (_3, 0B, 10);
+/usr/include/stdlib.h:364:16: missed: statement clobbers memory: _104 = strtol (_4, 0B, 10);
+/usr/include/stdlib.h:364:16: missed: statement clobbers memory: _102 = strtol (_5, 0B, 10);
+main_double.c:45:9: missed: statement clobbers memory: _12 = posix_memalign (&D.2903, 64, bytes_68);
+main_double.c:46:12: missed: statement clobbers memory: _13 = posix_memalign (&D.2907, 64, bytes_68);
+main_double.c:47:12: missed: statement clobbers memory: _14 = posix_memalign (&D.2911, 64, bytes_68);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __builtin_fwrite ("Memory allocation failed.\n", 1, 26, stderr.4_15);
+main_double.c:49:9: missed: statement clobbers memory: free (base_x_155);
+main_double.c:50:9: missed: statement clobbers memory: free (base_y_50);
+main_double.c:65:9: missed: statement clobbers memory: multiply_double (x_78, y_79, z_80, n_67);
+main_double.c:15:5: missed: statement clobbers memory: clock_gettime (1, &t);
+main_double.c:15:5: missed: statement clobbers memory: clock_gettime (1, &t);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "%zu,%d,%d,%.9f,%.9f,%.6f,PASS\n", n_67, _105, _47, elapsed_81, _46, _44);
+main_double.c:94:5: missed: statement clobbers memory: free (_71);
+main_double.c:95:5: missed: statement clobbers memory: free (_74);
+main_double.c:96:5: missed: statement clobbers memory: free (_77);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __fprintf_chk (stderr.11_39, 1, "Correctness failed at %zu\n", i_154);
+main_double.c:79:13: missed: statement clobbers memory: free (_71);
+main_double.c:80:13: missed: statement clobbers memory: free (_74);
+main_double.c:81:13: missed: statement clobbers memory: free (_77);
+main_double.c:71:9: missed: statement clobbers memory: multiply_double (x_78, y_79, z_80, n_67);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __builtin_fwrite ("Invalid arguments.\n", 1, 19, stderr.3_10);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __fprintf_chk (stderr.0_2, 1, "Usage: %s elements repetitions offset\n", _1);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: note: ***** Analysis failed with vector mode V2DI
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+multiply_double.c:8:26: optimized: loop vectorized using 16 byte vectors
+multiply_double.c:3:6: note: vectorized 1 loops in function.
+multiply_double.c:11:1: note: ***** Analysis failed with vector mode V2DF
+multiply_double.c:11:1: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF

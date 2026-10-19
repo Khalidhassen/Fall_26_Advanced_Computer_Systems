@@ -1,0 +1,36 @@
+main_stride.c:16:5: missed: statement clobbers memory: clock_gettime (1, &t);
+main_stride.c:17:21: note: ***** Analysis failed with vector mode V4DI
+main_stride.c:17:21: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+main_stride.c:20:5: note: vectorized 0 loops in function.
+main_stride.c:28:29: missed: statement clobbers memory: length_70 = strtoull (_3, 0B, 10);
+/usr/include/stdlib.h:364:16: missed: statement clobbers memory: _112 = strtol (_4, 0B, 10);
+main_stride.c:30:29: missed: statement clobbers memory: stride_72 = strtoull (_5, 0B, 10);
+main_stride.c:46:9: missed: statement clobbers memory: _14 = posix_memalign (&D.3476, 64, bytes_73);
+main_stride.c:47:12: missed: statement clobbers memory: _15 = posix_memalign (&D.3480, 64, bytes_73);
+main_stride.c:48:12: missed: statement clobbers memory: _16 = posix_memalign (&D.3484, 64, bytes_73);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __builtin_fwrite ("Memory allocation failed.\n", 1, 26, stderr.3_17);
+main_stride.c:50:9: missed: statement clobbers memory: free (base_x_165);
+main_stride.c:51:9: missed: statement clobbers memory: free (base_y_52);
+main_stride.c:67:9: missed: statement clobbers memory: multiply_stride (_76, _80, _83, length_70, stride_72);
+main_stride.c:16:5: missed: statement clobbers memory: clock_gettime (1, &t);
+main_stride.c:16:5: missed: statement clobbers memory: clock_gettime (1, &t);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:112:10: missed: statement clobbers memory: __printf_chk (1, "%zu,%zu,%zu,%d,%.9f,%.6f,%.6f,%.6f,PASS\n", length_70, stride_72, processed_85, _113, elapsed_84, ns_per_element_87, gflops_88, useful_gib_s_89);
+main_stride.c:108:5: missed: statement clobbers memory: free (_76);
+main_stride.c:109:5: missed: statement clobbers memory: free (_80);
+main_stride.c:110:5: missed: statement clobbers memory: free (_83);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __fprintf_chk (stderr.8_40, 1, "Correctness failed at %zu\n", i_164);
+main_stride.c:85:13: missed: statement clobbers memory: free (_76);
+main_stride.c:86:13: missed: statement clobbers memory: free (_80);
+main_stride.c:87:13: missed: statement clobbers memory: free (_83);
+main_stride.c:73:9: missed: statement clobbers memory: multiply_stride (_76, _80, _83, length_70, stride_72);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __builtin_fwrite ("Invalid arguments.\n", 1, 19, stderr.2_13);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: missed: statement clobbers memory: __fprintf_chk (stderr.0_2, 1, "Usage: %s length repetitions stride\n", _1);
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: note: ***** Analysis failed with vector mode V4DI
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:105:10: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+multiply_stride.c:9:26: optimized: loop vectorized using 32 byte vectors
+multiply_stride.c:9:26: optimized: loop vectorized using 16 byte vectors
+multiply_stride.c:9:26: missed: couldn't vectorize loop
+multiply_stride.c:9:26: missed: not vectorized: number of iterations cannot be computed.
+multiply_stride.c:3:6: note: vectorized 1 loops in function.
+multiply_stride.c:12:1: note: ***** Analysis failed with vector mode V8SF
+multiply_stride.c:12:1: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V8SF

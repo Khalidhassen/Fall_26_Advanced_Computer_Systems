@@ -1,0 +1,28 @@
+{
+  "useful_gib_s": {
+    "median": 17.231092051302408,
+    "min": 14.759050878734408,
+    "max": 18.391110923426965,
+    "q1": 14.883058741276594,
+    "q3": 17.60972378517815,
+    "samples": 5
+  },
+  "modeled_gib_s": {
+    "median": 25.84663807695361,
+    "min": 22.138576318101613,
+    "max": 27.586666385140447,
+    "q1": 22.324588111914892,
+    "q3": 26.414585677767228,
+    "samples": 5
+  },
+  "modeled_GB_s": 27.752616313016023,
+  "assumed_Pcore_GHz": 4.7,
+  "SP_FMA_peak_GFLOPs": 150.4,
+  "DP_FMA_peak_GFLOPs": 75.2,
+  "SP_multiply_peak_GFLOPs": 75.2,
+  "DP_multiply_peak_GFLOPs": 37.6,
+  "SP_AI": 0.0625,
+  "DP_AI": 0.03125,
+  "SP_memory_reference_GFLOPs": 1.7345385195635015,
+  "DP_memory_reference_GFLOPs": 0.8672692597817507
+}

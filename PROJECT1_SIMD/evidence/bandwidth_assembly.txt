@@ -1,0 +1,72 @@
+
+bandwidth:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+00000000000014f0 <copy_kernel>:
+    14f0:	f3 0f 1e fa          	endbr64 
+    14f4:	48 89 f1             	mov    rcx,rsi
+    14f7:	48 85 d2             	test   rdx,rdx
+    14fa:	0f 84 a7 00 00 00    	je     15a7 <copy_kernel+0xb7>
+    1500:	48 8d 42 ff          	lea    rax,[rdx-0x1]
+    1504:	48 83 f8 06          	cmp    rax,0x6
+    1508:	0f 86 a6 00 00 00    	jbe    15b4 <copy_kernel+0xc4>
+    150e:	48 89 d6             	mov    rsi,rdx
+    1511:	48 c1 ee 03          	shr    rsi,0x3
+    1515:	48 c1 e6 05          	shl    rsi,0x5
+    1519:	31 c0                	xor    eax,eax
+    151b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+    1520:	c5 fc 10 0c 07       	vmovups ymm1,YMMWORD PTR [rdi+rax*1]
+    1525:	c5 fc 11 0c 01       	vmovups YMMWORD PTR [rcx+rax*1],ymm1
+    152a:	48 83 c0 20          	add    rax,0x20
+    152e:	48 39 f0             	cmp    rax,rsi
+    1531:	75 ed                	jne    1520 <copy_kernel+0x30>
+    1533:	48 89 d0             	mov    rax,rdx
+    1536:	48 83 e0 f8          	and    rax,0xfffffffffffffff8
+    153a:	f6 c2 07             	test   dl,0x7
+    153d:	74 71                	je     15b0 <copy_kernel+0xc0>
+    153f:	c5 f8 77             	vzeroupper 
+    1542:	48 89 d6             	mov    rsi,rdx
+    1545:	48 29 c6             	sub    rsi,rax
+    1548:	4c 8d 46 ff          	lea    r8,[rsi-0x1]
+    154c:	49 83 f8 02          	cmp    r8,0x2
+    1550:	76 19                	jbe    156b <copy_kernel+0x7b>
+    1552:	c5 f8 10 14 87       	vmovups xmm2,XMMWORD PTR [rdi+rax*4]
+    1557:	49 89 f0             	mov    r8,rsi
+    155a:	49 83 e0 fc          	and    r8,0xfffffffffffffffc
+    155e:	c5 f8 11 14 81       	vmovups XMMWORD PTR [rcx+rax*4],xmm2
+    1563:	4c 01 c0             	add    rax,r8
+    1566:	4c 39 c6             	cmp    rsi,r8
+    1569:	74 3c                	je     15a7 <copy_kernel+0xb7>
+    156b:	c5 fa 10 04 87       	vmovss xmm0,DWORD PTR [rdi+rax*4]
+    1570:	4c 8d 40 01          	lea    r8,[rax+0x1]
+    1574:	48 8d 34 85 00 00 00 	lea    rsi,[rax*4+0x0]
+    157b:	00 
+    157c:	c5 fa 11 04 81       	vmovss DWORD PTR [rcx+rax*4],xmm0
+    1581:	4c 39 c2             	cmp    rdx,r8
+    1584:	76 21                	jbe    15a7 <copy_kernel+0xb7>
+    1586:	c5 fa 10 44 37 04    	vmovss xmm0,DWORD PTR [rdi+rsi*1+0x4]
+    158c:	48 83 c0 02          	add    rax,0x2
+    1590:	c5 fa 11 44 31 04    	vmovss DWORD PTR [rcx+rsi*1+0x4],xmm0
+    1596:	48 39 c2             	cmp    rdx,rax
+    1599:	76 0c                	jbe    15a7 <copy_kernel+0xb7>
+    159b:	c5 fa 10 44 37 08    	vmovss xmm0,DWORD PTR [rdi+rsi*1+0x8]
+    15a1:	c5 fa 11 44 31 08    	vmovss DWORD PTR [rcx+rsi*1+0x8],xmm0
+    15a7:	c3                   	ret    
+    15a8:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+    15af:	00 
+    15b0:	c5 f8 77             	vzeroupper 
+    15b3:	c3                   	ret    
+    15b4:	31 c0                	xor    eax,eax
+    15b6:	eb 8a                	jmp    1542 <copy_kernel+0x52>
+
+Disassembly of section .fini:
