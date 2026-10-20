@@ -190,7 +190,7 @@ SIMD provided its largest benefits when the working set was small and the compil
 
 ## AI assistance and student contribution
 
-ChatGPT assisted with benchmark and collection code, troubleshooting, analysis and plotting scripts, interpretation, and drafting this report and the repository documentation. Khalid ran the experiments on his laptop and supplied the raw outputs, compiler diagnostics, disassembly, system information, and power-condition confirmation. Interpretation and debugging were developed with AI assistance; this report does not claim independently authored validation code or an equal division of work.
+ChatGPT assisted with benchmark and collection code, troubleshooting, analysis and plotting scripts, interpretation, and drafting this report and the repository documentation. I ran the experiments on his laptop and supplied the raw outputs, compiler diagnostics, disassembly, system information, and power-condition confirmation. Interpretation and debugging were developed with AI assistance; this report does not claim independently authored validation code or an equal division of work.
 
 Specific corrections in the workflow included excluding the mislabeled multiplication sweep, rerunning with explicit size and repetition output, recognizing that non-unit stride used scalar instructions, and retaining the unsupported-counter result rather than estimating measured cycles. The report distinguishes useful-byte bandwidth from modeled traffic and preserves timing anomalies instead of deleting them.
 
