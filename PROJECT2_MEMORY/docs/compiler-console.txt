@@ -1,0 +1,5 @@
+Transcribed from student-supplied compiler console output, October 20, 2026.
+
+Visual Studio 2026 Developer Command Prompt v18.11.0
+[vcvarsall.bat] Environment initialized for: x64
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64

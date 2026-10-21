@@ -1,0 +1,7 @@
+Transcribed from student-supplied console output, October 20, 2026.
+Not an original timestamped log file.
+
+C:\Users\Khali\memory-project>bin\page_chase.exe 512 4096 10000000 large
+VirtualAlloc MEM_LARGE_PAGES failed: Windows error 1450
+
+Repeated attempt returned the same error.

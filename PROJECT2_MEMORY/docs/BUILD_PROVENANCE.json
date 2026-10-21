@@ -1,0 +1,18 @@
+{
+  "input_zip_sha256": "ac5b442a00dfaf6e5eed160e2a04818ce7dac2b2f8ab9c66c1ece2029125fee9",
+  "note": "Source and compiled binary hashes verified against original uploaded ZIP and collection logs. Executables/objects are omitted from the repository; source is included.",
+  "compiler": "MSVC x64 19.51.36260 (my console transcript)",
+  "kernel_source_sha256": "e15daf7b35a7097dbe9997bd3efc3265fd028822569e8bfe18686bbd8747f27e",
+  "kernel_executable_sha256": "57e8596c1668954a13af73a9344805c2eda29fe8d3c3beab33db2e634fc8cafe",
+  "page_source_sha256": "2f5407f16a1bfe77c589ae68d616efe51df8174f5dbf3cb8828bb39e95226235",
+  "page_executable_sha256": "734d8f2c15bb09080000def1654d985f636ae19b6bbcd74279d6cbd8bb9734f9",
+  "main_trace_etl_sha256": "c302fd1a0d14171983bed224588ccd6a6eed77353c236523882213b153b9346a",
+  "main_trace_bytes": 184549376,
+  "cache_latency_source_sha256": "59f4fbba627bbace8df6b773cd723974044f1e8399c70e24ba02de7524f666e6",
+  "cache_latency_executable_sha256": "515439e3cd403dcb3787f294bdf9aeec553b4b4b55861bd64e9d254ce3c8974c",
+  "cache_latency_input_zip_sha256": "3ce0b12c1d05cc98b7afacfbfc8ebfa79721703505d9792bef3260ef18ca5fd6",
+  "cache_latency_session": "cache-latency-20261020-195943",
+  "tlb_study_profile_sha256": "45994566c0d1c0f0d9457cdcc84e76bbda811bc829a4de0358637b72cafecbff",
+  "tlb_study_input_sha256": "dea1d7e011bec6fa784c951f2597e514139df1ee34f0afd6ff540c6543c81293",
+  "tlb_study_status": "Counter validation failed: no STLB increments in any of 50 timed CPU-0 windows; latency data retained separately."
+}

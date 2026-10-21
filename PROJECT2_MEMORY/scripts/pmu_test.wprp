@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0">
+  <Profiles>
+    <SystemCollector Id="Collector" Name="PMU test">
+      <BufferSize Value="1024"/>
+      <Buffers Value="64"/>
+    </SystemCollector>
+
+    <SystemProvider Id="Provider">
+      <Keywords>
+        <Keyword Value="ProcessThread"/>
+        <Keyword Value="Loader"/>
+        <Keyword Value="CSwitch"/>
+      </Keywords>
+    </SystemProvider>
+
+    <HardwareCounter Id="Counters" Strict="true">
+      <Counters>
+        <Counter Value="TotalCycles"/>
+        <Counter Value="InstructionRetired"/>
+        <Counter Value="LLCMisses"/>
+      </Counters>
+      <Events>
+        <Event Value="CSwitch"/>
+      </Events>
+    </HardwareCounter>
+
+    <Profile Id="PMUTest.Verbose.File"
+             Name="PMUTest"
+             Description="Hardware counter recording test"
+             LoggingMode="File"
+             DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="Collector">
+          <SystemProviderId Value="Provider"/>
+          <HardwareCounterId Value="Counters"/>
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>

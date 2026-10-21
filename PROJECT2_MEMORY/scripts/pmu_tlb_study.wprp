@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0">
+  <Profiles>
+    <SystemCollector Id="Collector" Name="PMU test">
+      <BufferSize Value="1024" />
+      <Buffers Value="64" />
+    </SystemCollector>
+    <SystemProvider Id="Provider">
+      <Keywords>
+        <Keyword Value="ProcessThread" />
+        <Keyword Value="Loader" />
+        <Keyword Value="CSwitch" />
+      </Keywords>
+    </SystemProvider>
+    <MicroArchitecturalConfig Id="AlderLakeTLB" Base="">
+      <ProfileSources Architecture="INTEL" Family="6" Model="154" Description="Alder Lake P-core TLB pilot">
+        <ProfileSource Name="KH_ADL_RETIRED_LOADS" Event="0xD0" Unit="0x81" Interval="0x02000003" Persist="false" />
+        <ProfileSource Name="KH_ADL_RETIRED_STLB_MISS" Event="0xD0" Unit="0x11" Interval="0x02000003" Persist="false" />
+      </ProfileSources>
+    </MicroArchitecturalConfig>
+    <HardwareCounter Id="Counters" Strict="true">
+      <MicroArchitecturalConfigId Value="AlderLakeTLB" />
+      <Counters>
+        <Counter Value="InstructionRetired" />
+<Counter Value="TotalCycles" />
+<Counter Value="KH_ADL_RETIRED_STLB_MISS" /></Counters>
+      <Events>
+        <Event Value="CSwitch" />
+      </Events>
+    </HardwareCounter>
+    <Profile Id="PMUTest.Verbose.File" Name="PMUTest" Description="Hardware counter recording test" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors>
+        <SystemCollectorId Value="Collector">
+          <SystemProviderId Value="Provider" />
+          <HardwareCounterId Value="Counters" />
+        </SystemCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>
