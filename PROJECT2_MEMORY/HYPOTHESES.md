@@ -1,56 +1,43 @@
 # Experiment predictions
 
-This UTF-8 transcription combines the two original note files. Their unchanged bytes remain in [original-hypotheses.zip](data/raw/original-hypotheses.zip). The initial general predictions have no recorded timestamp. Later entries contain local timestamps. Some predictions were written after related pilot results; they are not represented as predictions made before all project measurements.
+I expect access latency to increase as the working set becomes too large to fit in each cache. I also expect sequential access to have higher bandwidth than random access.
 
-## Original HYPOTHESIS.md
+As competing memory traffic increases, I expect bandwidth to eventually level off while latency continues to rise.
 
-The Access latency should increase as the working set exceeds each cache's capacity and Sequential access should receive higher bandwidth than random access.
+I expect larger pages to reduce address-translation overhead for some access patterns.
 
+## Loaded-latency prediction
 
+Recorded before this collection:
 
-Increasing competing memory traffic should eventually stop improving bandwidth while latency continues rising.
+I expect shorter delays between memory requests to increase bandwidth until it gets close to saturation. After that point, I expect latency to keep increasing while bandwidth improves only slightly.
 
+## Performance-plan loaded latency
 
+Recorded before this collection:
 
-Larger pages may reduce address-translation overhead for some access patterns.
+I expect latency to rise as memory traffic increases, with smaller bandwidth improvements at higher loads. Switching to the Performance power plan may affect the results, but I do not have a specific prediction about whether it will improve them or by how much.
 
+## Page-size prediction
 
-## Loaded-latency prediction — 2026-10-20T12:32:13.1527311-04:00
-AI-assisted prediction recorded before this collection:
-Reducing the delay between memory requests should increase bandwidth
-until it approaches saturation. Beyond that region, latency should
-continue increasing while bandwidth gains become smaller.
+Recorded before this collection:
 
-## Performance-plan loaded latency — 2026-10-20T12:37:43.4735150-04:00
-AI-assisted prediction recorded before collection:
-Latency should rise as memory traffic increases, with smaller bandwidth
-gains at higher loads. The Performance plan may change the results;
-the direction and size of that change are not assumed.
+I expect large pages to reduce address-translation overhead in this random-access test. However, a difference in latency alone would not tell me the TLB miss rate.
 
+## Page-locality sweep
 
-## Original HYPOTHESES.md
+Recorded after the pilot, before the full sweep:
 
+I expect dependent loads to take longer when the same number of cache-line nodes is spread across more 4 KiB pages. Cache behavior could also affect the results, so I cannot attribute the entire difference to TLB misses, especially since this test does not directly count them.
 
-## Page-size prediction — 2026-10-20T13:09:07.3848212-04:00
-AI-assisted prediction before collection:
-Large pages may reduce address-translation overhead for this random-access
-test. A latency difference alone would not prove a particular TLB miss rate.
+## Access-pattern latency sweep
 
-## Page-locality sweep — 2026-10-20T13:21:04.4510724-04:00
-AI-assisted prediction after the pilot, before this full sweep:
-Spreading the same number of cache-line nodes across more 4 KiB pages
-may increase dependent-load time. Cache behavior can also contribute;
-this experiment does not directly count TLB misses.
+Recorded after earlier experiments, before this collection:
 
-## Access-pattern latency sweep — 2026-10-20T13:27:17.4178378-04:00
-AI-assisted prediction after earlier experiments, before this collection:
-Sequential access may report lower latency because prefetchers remain
-enabled. Increasing spacing may reduce that benefit. MLC randomization
-uses bounded blocks, so it is not a globally random pointer chain.
+I expect sequential access to show lower latency because prefetchers are still enabled. Increasing the spacing between accesses may reduce that benefit. MLC randomizes accesses within bounded blocks, so I would not treat it as a fully random pointer chain across the entire working set.
 
-## Mixed-traffic latency — 2026-10-20T13:30:43.9937830-04:00
-AI-assisted prediction before this collection:
-Changing background read/write traffic may change both bandwidth and
-read-probe latency. Non-temporal writes use a different store policy,
-so their results cannot isolate read/write ratio alone.
+## Mixed-traffic latency
 
+Recorded before this collection:
+
+I expect changing the background mix of reads and writes to affect both bandwidth and read-probe latency. Non-temporal writes also change the store policy, so any difference in those results would not be caused by the read/write ratio alone.
