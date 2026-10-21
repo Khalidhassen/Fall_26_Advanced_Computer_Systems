@@ -1,0 +1,6 @@
+# Analysis/plotting: tested with Python 3.12, NumPy 2.3.5, Matplotlib 3.10.8.
+# NumPy 2.2 supports Python 3.10; pip chooses a compatible release.
+numpy>=2.2,<3
+matplotlib>=3.10,<4
+# Optional ETL re-decoding (also tested); figures can use shipped counter CSV.
+dissect.etl==3.14

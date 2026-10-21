@@ -1,0 +1,8 @@
+bin/
+build/
+runs/
+.venv/
+__pycache__/
+*.obj
+*.exe
+*.etl
