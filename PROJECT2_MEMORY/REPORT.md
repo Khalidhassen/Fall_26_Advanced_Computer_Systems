@@ -192,7 +192,7 @@ A naive interpretation would call the faster result intrinsic DRAM latency or as
 
 [README.md](README.md) gives build, processing and ETL-decoding commands. The repository contains byte-preserved per-session raw archives, checksummed trace parts, source code, collection scripts, processed tables and PNG/SVG figures. Original source and compiled executable hashes were checked against the supplied archive. I ran the individual collection commands on Windows. The packaged wrapper consolidates those commands but was not itself executed there; AI-assisted Python processing and ETL decoding were run end to end on my submitted data.
 
-Interpretation is limited by unverified power policy for early sessions, variable frequency/background activity, short MLC sampling intervals, unresolved LLC-transition anomalies, bounded randomization, modeled rather than directly measured controller bandwidth, and failure to obtain reproducible validated direct TLB counts or a successful large-page comparison. The observed curve supports a throughput/latency tradeoff, not a definitive physical knee. [SUBMISSION.md](SUBMISSION.md) maps these limits to the assignment rather than claiming all rubric items are fully satisfied.
+Interpretation is limited by unverified power policy for early sessions, variable frequency/background activity, short MLC sampling intervals, unresolved LLC-transition anomalies, bounded randomization, modeled rather than directly measured controller bandwidth, and failure to obtain reproducible validated direct TLB counts or a successful large-page comparison. The observed curve supports a throughput/latency tradeoff, not a definitive physical knee.
 
 ## References
 
