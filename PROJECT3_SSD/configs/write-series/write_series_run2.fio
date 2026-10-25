@@ -1,0 +1,27 @@
+; Reconstructed from recorded fio options; original files are in data/raw.
+[global]
+time_based=0
+allow_file_create=0
+ioengine=windowsaio
+direct=1
+thread=1
+rw=write
+bs=128k
+offset=0
+size=2G
+io_size=40G
+runtime=120
+log_avg_msec=1000
+ramp_time=0
+iodepth=1
+numjobs=1
+refill_buffers=1
+buffer_compress_percentage=0
+end_fsync=1
+lat_percentiles=1
+percentile_list=50:95:99:99.9
+write_bw_log=write_series_run2
+write_lat_log=write_series_run2
+filename=benchmark.bin
+
+[write_series_run2]

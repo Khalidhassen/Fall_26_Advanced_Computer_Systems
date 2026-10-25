@@ -1,0 +1,16 @@
+; Reconstructed from recorded fio options; original files are in data/raw.
+[global]
+filename=benchmark.bin
+allow_file_create=0
+ioengine=windowsaio
+direct=0
+invalidate=0
+thread=1
+rw=read
+bs=1M
+offset=0
+size=256M
+iodepth=1
+numjobs=1
+
+[warmup_direct_run2]
