@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "main_mlc_observations": 360,
+  "kernel_trials": 20,
+  "page_trials": 50,
+  "cache_latency_trials": 35,
+  "page_locality_followup_trials": 50,
+  "tlb_counter_status": "EXCLUDED_ZERO_RESPONSE",
+  "raw_files_checked": 29,
+  "figure_pairs": 10,
+  "submission_files": 93,
+  "largest_file_bytes": 23934880,
+  "notes": "Raw archive checksums/CRC, source hashes, trace parts, observation counts, image readability and local Markdown links checked. analyze.py performs detailed numerical/coverage checks. decode_counters.py performs the ETL checks."
+}

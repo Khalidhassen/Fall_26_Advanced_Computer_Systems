@@ -1,0 +1,41 @@
+{
+  "mlc_measurements": 363,
+  "main_mlc_measurements": 360,
+  "kernel_trials": 20,
+  "page_locality_trials": 50,
+  "cache_latency_trials": 35,
+  "page_locality_followup_trials": 50,
+  "tlb_counter_status": "TLB_ZERO_RESPONSE",
+  "failed_or_fallback_logs": [
+    {
+      "session": "environment-and-setup",
+      "file": "large_page_2MiB_test.txt",
+      "detail": "No valid result / allocation or command error"
+    },
+    {
+      "session": "large-page-retry-20261020-131534",
+      "file": "large_pages.txt",
+      "detail": "No valid result / allocation or command error"
+    },
+    {
+      "session": "page-pilot-20261020-130907",
+      "file": "large_pages.txt",
+      "detail": "4 KiB fallback"
+    },
+    {
+      "session": "rw-mixes-20261020-122050",
+      "file": "loaded_run5.txt",
+      "detail": "No valid result / allocation or command error"
+    }
+  ],
+  "plots": 10,
+  "counter_input": "kernel_counters.csv (regenerate with scripts/decode_counters.py)",
+  "missing": [
+    "Reproducible validated direct TLB-miss counts (attempts retained as negatives)",
+    "Successful large-page comparison",
+    "Exact 70/30 traffic preset",
+    "Definitive physical saturation knee",
+    "Per-session power records for early sessions",
+    "Measured fixed core frequency"
+  ]
+}

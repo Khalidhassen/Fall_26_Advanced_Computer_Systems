@@ -1,0 +1,23 @@
+{
+  "archive_name": "kernel_study.etl.zip",
+  "bytes": 46177587,
+  "sha256": "7804dd728b2d0a76bd53cff85013eea23b4ed185476172d595712e4a5d5367b8",
+  "parts": [
+    {
+      "path": "data/raw/traces/kernel_study.etl.zip.part001",
+      "bytes": 20971520,
+      "sha256": "978a26e75b55e1738bc39a7e79a7bb9edfe5e025c4c6aee3bc3f60d373de0f55"
+    },
+    {
+      "path": "data/raw/traces/kernel_study.etl.zip.part002",
+      "bytes": 20971520,
+      "sha256": "460a318cc858f9fc7324957ddc68ee9846b34330fd1be1eb8e6de61bdecff277"
+    },
+    {
+      "path": "data/raw/traces/kernel_study.etl.zip.part003",
+      "bytes": 4234547,
+      "sha256": "52232f1e783194ef4fda9ffba80a2f8b94922293b508d01929b7b5a09e620e79"
+    }
+  ],
+  "uncompressed_etl_bytes": 184549376
+}
