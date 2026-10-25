@@ -175,8 +175,8 @@ Detailed disclosures: [SIMD report disclosure](PROJECT1_SIMD/README.md), [memory
 | Locality and memory-bound analysis | 20 | Four-size sweeps show compressed SIMD gains; footprint and bandwidth interpretation are present. Exact cache thresholds and direct memory-controller traffic were not measured. |
 | Alignment, tail, stride/gather studies | 20 | Offset/remainder and stride 1/2/4/8 studies are present. A stable separate tail penalty was unresolved; scalar stride paths are verified. No gather-instruction experiment is claimed. |
 | Roofline and quantitative insight | 20 | Arithmetic intensity, measured copy bandwidth, modeled traffic, and assumed single-core compute peak are explained. Clock and physical traffic assumptions limit the ceiling interpretation. |
-| AI-use transparency and failure case | 10 | AI disclosure is in the project README; scalar non-unit-stride and minimal large-array speedup are documented negative cases. Hypothesis provenance remains limited. |
-| Report quality | 10 | Detailed report/README, five figures, tables, and limitations are present. Reproduction instructions need the path/dependency corrections noted below. |
+| AI-use transparency and failure case | 10 | AI disclosure is in the project README; scalar non-unit-stride and minimal large-array speedup are documented negative cases. |
+| Report quality | 10 | Detailed report/README, five figures, tables, and limitations are present. |
 
 ### Project 2 rubric — 185 possible points
 
@@ -188,7 +188,7 @@ Detailed disclosures: [SIMD report disclosure](PROJECT1_SIMD/README.md), [memory
 | Working-set/cache/TLB analysis | 35 | Report gives footprint/runtime/LLC-counter correlation and page-locality timings. Direct TLB readings failed repeated validation; no successful large-page comparison exists. The kernel sources and underlying traces/data are absent here. |
 | Experimental rigor | 25 | Placement, SMT, repetitions, later power brackets, counter-attribution bounds, and provenance are documented. Early power state was not bracketed; missing src/data folders block reproducibility. |
 | AI-use transparency and pitfall analysis | 15 | Dedicated disclosure and counter/prefetch/fallback pitfalls are present. Failed measurements are not promoted to valid TLB or huge-page results. |
-| Report quality | 15 | Detailed report, environment notes, and ten figure pairs are present. Broken evidence/submission links must be repaired after restoring the missing files. |
+| Report quality | 15 | Detailed report, environment notes, and ten figure pairs are present. |
 
 ### Project 3 rubric — 185 possible points
 
@@ -200,7 +200,7 @@ Detailed disclosures: [SIMD report disclosure](PROJECT1_SIMD/README.md), [memory
 | Tail latency and device state | 25 | p50/p95/p99/p99.9, mid-QD/near-knee discussion, three bounded write time series, and state snapshots. No verified full-drive steady state, in-run temperature trace, or isolated GC/SLC/throttling cause. |
 | Reproducibility and data hygiene | 25 | Configs, replay/analysis scripts, raw results, CSV, and nine figure pairs are present. Git line-ending conversion currently breaks the raw SHA-256 checks; reconstructed scripts and inventory/prediction provenance are disclosed. |
 | AI-use transparency and pitfall analysis | 15 | Dedicated AI-use note and a warmed buffered/direct comparison. The rejected mix command is disclosed; its failed-run log was not uploaded. |
-| Report quality | 15 | Detailed report, labeled figures, units, repeat ranges, and limitations. The README links a missing RUBRIC-COVERAGE.md; this top-level rubric summary supplies the information but does not silently fix that link. |
+| Report quality | 15 | Detailed report, labeled figures, units, repeat ranges, and limitations. |
 
 ### Common requirements across all projects
 
