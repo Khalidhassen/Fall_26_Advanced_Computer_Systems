@@ -2,7 +2,7 @@
 
 ## Approach
 
-I used OpenAI ChatGPT/Codex to help plan and implement the SSD experiments and prepare this repository. AI generated most of the PowerShell collection commands, the portable replay scripts, Python parsing/validation/plotting code, and report/documentation draft. The disclosure and first-person report do not mean I independently authored all of that code or prose.
+I used OpenAI ChatGPT/Codex to help plan and implement the SSD experiments and prepare this repository. AI generated most of the PowerShell collection commands, the portable replay scripts, Python parsing/validation/plotting code, and report/documentation draft.
 
 ## My contribution
 
