@@ -15,7 +15,6 @@ ssd-project/
   ENVIRONMENT.md
   AI-USE.md
   HYPOTHESES.md
-  RUBRIC-COVERAGE.md
   requirements.txt
   configs/               # Portable configs reconstructed from recorded settings
   scripts/
